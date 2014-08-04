@@ -3,7 +3,9 @@
 # git completion
 curl -o ~/dotfiles/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
-DOT_FILES=(git-completion.bash .vim .vimrc)
+cp ~/dotfiles/.gitconfig.sample ~/dotfiles/.gitconfig
+
+DOT_FILES=(git-completion.bash .gitconfig .vim .vimrc)
 
 for file in ${DOT_FILES[@]}
 do
