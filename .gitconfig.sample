@@ -1,0 +1,10 @@
+[user]
+	name = 
+	email = 
+[color]
+	ui = true
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
