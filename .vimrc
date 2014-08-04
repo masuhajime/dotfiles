@@ -1,7 +1,5 @@
-source ~/.vim/encode.vim
-
 set encoding=japan
-set fileencodings=sjis,utf-8,iso-2022-jp,euc-jp
+set fileencodings=utf-8,sjisi,so-2022-jp,euc-jp
 set nu
 colorscheme darkblue
 set expandtab
