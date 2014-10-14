@@ -1,16 +1,19 @@
 set encoding=japan
 set fileencodings=utf-8,sjisi,so-2022-jp,euc-jp
 set nu
-colorscheme darkblue
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set nocompatible
 set title
+autocmd FileType * setlocal formatoptions-=ro
     
 "" show match quote like ()
 set matchtime=2
 set wildmenu
+
+colorscheme inkpot
+syntax on
 
 "" show vim status line
 set laststatus=2
