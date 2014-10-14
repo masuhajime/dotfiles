@@ -21,11 +21,11 @@ highlight StatusLine   term=NONE cterm=NONE ctermfg=black ctermbg=white
 
 if has('vim_starting')
     set nocompatible
-    set runtimepath+=/Users/masuhajime/.vim/bundle/neobundle.vim/
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/masuhajime/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
