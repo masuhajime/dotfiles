@@ -3,12 +3,12 @@ wip
 
 
 ```
-vim .ssh/config
+$ vim ~/.ssh/config
 Host github
     HostName github.com
     User git
-vim ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_rsa
+$ vim ~/.ssh/id_rsa
+$ chmod 600 ~/.ssh/id_rsa
 ```
 
 # how to use
