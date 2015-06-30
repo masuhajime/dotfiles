@@ -9,6 +9,7 @@ Host github
     User git
 $ vim ~/.ssh/id_rsa
 $ chmod 600 ~/.ssh/id_rsa
+$ chmod 600 ~/.ssh/config
 ```
 
 # how to use
