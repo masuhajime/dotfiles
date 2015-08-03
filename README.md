@@ -8,8 +8,7 @@ Host github
     HostName github.com
     User git
 $ vim ~/.ssh/id_rsa
-$ chmod 600 ~/.ssh/id_rsa
-$ chmod 600 ~/.ssh/config
+$ chmod 600 ~/.ssh/id_rsa && chmod 600 ~/.ssh/config
 ```
 
 # how to use
