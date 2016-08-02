@@ -8,13 +8,15 @@ mv ~/dotfiles/git-completion.bash ~/dotfiles/.git-completion.bash
 cp ~/dotfiles/.gitconfig.sample ~/dotfiles/.gitconfig
 
 echo "### cleate links ###"
-DOT_FILES=(.git-completion.bash .gitconfig .vim .vimrc)
-for file in ${DOT_FILES[@]}
-do
-    cmd="ln -nfs $HOME/dotfiles/$file $HOME/$file"
+create_link () {
+    cmd="ln -nfs $HOME/dotfiles/$1 $HOME/$file"
     $cmd
     echo $cmd
-done
+}
+create_link ".git-completion.bash"
+create_link ".gitconfig"
+create_link ".vim"
+create_link ".vimrc"
 
 echo "### clone neobundle ###"
 cmd="curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh"
@@ -26,5 +28,7 @@ echo "### setup end ###"
 echo "### TODO ###"
 echo "$ echo \"source ~/.git-completion.bash\" >> ~/.bash_profile"
 echo "$ source ~/.bash_profile"
+echo "git config --global user.name <name>"
+echo "git config --global user.email <email>"
 echo "############"
 
