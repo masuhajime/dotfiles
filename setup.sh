@@ -3,7 +3,7 @@
 // shell 冪等性
 // http://qiita.com/yn-misaki/items/3ec0605cba228a7d5c9a
 
-DIR_DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR_DOTFILES="$(cd "$(dirname "${BASH_SOURCE:-${(%):-%N}}")"; pwd)"
 
 echo "### setup start"
 echo "===="
@@ -51,7 +51,7 @@ if [ -e $BASH_PROFILE ]; then
     echo "add source $FILE_DOTFILES_PROFILE to $BASH_PROFILE"
     echo "" >> "$BASH_PROFILE"
     echo "$TAG" >> "$BASH_PROFILE"
-    echo ". $FILE_DOTFILES_PROFILE" >> "$BASH_PROFILE"
+    echo "source $FILE_DOTFILES_PROFILE" >> "$BASH_PROFILE"
     source_file "$BASH_PROFILE"
   fi
 fi
