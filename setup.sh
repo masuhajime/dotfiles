@@ -1,9 +1,10 @@
 #!/bin/bash
 
-// shell 冪等性
-// http://qiita.com/yn-misaki/items/3ec0605cba228a7d5c9a
+# shell 冪等性
+# http://qiita.com/yn-misaki/items/3ec0605cba228a7d5c9a
 
 DIR_DOTFILES="$(cd "$(dirname "${BASH_SOURCE:-${(%):-%N}}")"; pwd)"
+echo $DIR_DOTFILES
 
 echo "### setup start"
 echo "===="
@@ -13,7 +14,7 @@ curl -o "$DIR_DOTFILES/.git-completion.bash" https://raw.githubusercontent.com/g
 
 # .gitconfig
 if [ ! -e "$DIR_DOTFILES/.gitconfig" ]; then
-  cp /dotfiles/.gitconfig.sample ~/dotfiles/.gitconfig
+  cp "$DIR_DOTFILES/.gitconfig.sample" "$DIR_DOTFILES/.gitconfig"
 fi
 
 echo "### cleate links ###"
