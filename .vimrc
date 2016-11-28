@@ -12,9 +12,6 @@ autocmd FileType * setlocal formatoptions-=ro
 set matchtime=2
 set wildmenu
 
-colorscheme inkpot
-syntax on
-
 "" show vim status line
 set laststatus=2
 "" status line info
@@ -54,3 +51,5 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+colorscheme inkpot
+syntax on
