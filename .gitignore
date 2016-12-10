@@ -1,3 +1,4 @@
 .gitconfig
 .vim/bundle/*
-.git-completion.bash
+git-completion.bash
+git-prompt.sh

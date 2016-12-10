@@ -10,7 +10,8 @@ echo "### setup start"
 echo "===="
 
 echo "### curl git-completion.bash"
-curl -o "$DIR_DOTFILES/.git-completion.bash" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+curl -o "$DIR_DOTFILES/git-completion.bash" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+curl -o "$DIR_DOTFILES/git-prompt.sh" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
 # .gitconfig
 if [ ! -e "$DIR_DOTFILES/.gitconfig" ]; then
@@ -23,7 +24,8 @@ create_link () {
   $cmd
   echo $cmd
 }
-create_link ".git-completion.bash"
+create_link "git-completion.bash"
+create_link "git-prompt.sh"
 create_link ".gitconfig"
 create_link ".vim"
 create_link ".vimrc"
